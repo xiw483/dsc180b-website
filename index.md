@@ -12,6 +12,8 @@ Acute Lymphocytic Leukemia (ALL) and Acute Myelogenous Leukemia (AML) are two co
 [Sample images of AML, ALL, and other types of leukemia](https://www.mdpi.com/2075-4418/9/3/104/htm)
 
 
+In our study, we apply a multiple testing model to a leukemia dataset collected by Harvard Professor of Pediatrics, Todd Golub. The dataset consists of the gene expressions of more than six thousands different genes from a mixture sample of seventy-two patients with either acute myeloid leukemia (AML) or acute lymphoblastic leukemia (ALL). And our task is to identify genes that differentiates the two types of leukemia.
+
 
 ## Theory and Methods
 ## Results
@@ -25,41 +27,3 @@ Golub TR, Slonim DK, Tamayo P, Huard C, Gaasenbeek M, Mesirov JP, Coller H, Loh 
 Schwartzman,A., Dougherty, R., Lee, J., Ghahremani, D., & Taylor, J. (2009). Empirical null and false discovery rate analysis in neuroimaging. NeuroImage, 44(1), 71–82.
 
 “Types of Leukemia: Children's Hospital Pittsburgh.” Children's Hospital of Pittsburgh, www.chp.edu/our-services/cancer/conditions/leukemia/types. 
-
-
-
-You can use the [editor on GitHub](https://github.com/xiw483/dsc180b-website/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xiw483/dsc180b-website/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

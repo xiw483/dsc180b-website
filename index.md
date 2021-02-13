@@ -6,7 +6,7 @@ Multiple testing analysis is a commonly used statistical practice in genetic res
 
 Acute Lymphocytic Leukemia (ALL) and Acute Myelogenous Leukemia (AML) are two common types of leukemia. According to the [Children's Hospital of Pittsburgh](https://www.chp.edu/our-services/cancer/conditions/leukemia/types), ALL acounts for about 75 percent of childhood leukemia. It affects the growth of lymphocytes, a type of white blood cells that is normally responsible for one's immunity, causing it to overproduce and crowding out other types of blood cells. On the other hand, AML causes the overproduction of granulocytes, another type of white blood cells. Identifying genes responsible for each of the two types of leukemia helps us to better understand their pathology as well as allows build statistical models adaptable for future studies and applications.
 
-[Sample images of AML, ALL, and othher main types of leukemia](/amm_all.jpeg)
+![Sample images of AML, ALL, and othher main types of leukemia](/amm_all.jpeg)
 
 
 

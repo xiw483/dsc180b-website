@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+# Multiple Testing Method with Empirical Null Distribution in Leukemia Studies
+## Introduction
+## Theory and Methods
+## Results
+## References
 
 You can use the [editor on GitHub](https://github.com/xiw483/dsc180b-website/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 

@@ -12,7 +12,13 @@ Acute Lymphocytic Leukemia (ALL) and Acute Myelogenous Leukemia (AML) are two co
 [Sample images of AML, ALL, and other types of leukemia](https://www.mdpi.com/2075-4418/9/3/104/htm)
 
 
-In our study, we apply a multiple testing model to a leukemia dataset collected by Harvard Professor of Pediatrics, Todd Golub. The dataset consists of the gene expressions of more than six thousands different genes from a mixture sample of seventy-two patients with either acute myeloid leukemia (AML) or acute lymphoblastic leukemia (ALL). And our task is to identify genes that differentiates the two types of leukemia.
+In our study, we apply a multiple testing model to a leukemia dataset collected by Harvard Professor of Pediatrics, Todd Golub. The dataset consists of the gene expressions of more than six thousands different genes from a mixture sample of seventy-two patients with either AML or ALL. And our task is to identify genes that differentiates the two types of leukemia.
+
+## Exploratory Data Analysis
+The dataset contains the gene expressions of 47 AML patients and 25 ALL patients.
+
+![Countplot of AML and ALL patients](/count.png)
+
 
 
 ## Theory and Methods

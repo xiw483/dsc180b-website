@@ -76,6 +76,8 @@ The graph above shows that the theoretical null distribution yields a FDR curve 
 At first, the above result seems to conflict with our hypothesis that the empirical null distribution will produce better results than the theoretical null distribution. While our result shows that the theoretical null distribution yields a lower FDR at the same level of threshold than the empirical null distribution, this does not necessarily mean that the theoretical null provides a more accurate result. Since we cannot know the actual label of the data, there is no way for us to actually test the accuracy of our result. What we have is an estimation of the error rate, which allows us to gain insight into the likelihood of false positives at each level of the threshold. The theoretical null distribution yields an apparent lower error rate, but this result may be incorrect. This is because that as we have observed, additional variance in the histogram, due to confounding factors, will skew the results of the theoretical null. In contrast, the empirical null distribution adjusts for those unknown confounding factors empirically. This results in lower detection power, as observed from the difference in the estimated parameter p<sub>0</sub>, but the error rate may be more realistic, meaning it is closer to the true error rate.
 
 
+
+
 ## References
 Ahmed N, Yigit A, Isik Z, Alpkocak A. Identification of Leukemia Subtypes from Microscopic Images Using Convolutional Neural Network. Diagnostics. 2019; 9(3):104. https://doi.org/10.3390/diagnostics9030104
 

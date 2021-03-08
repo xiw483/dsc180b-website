@@ -4,7 +4,7 @@ By Raymond Wang and Jacob Benson
 ## Introduction
 Multiple testing analysis is a commonly used statistical practice in genetic research, often used to separate significant genes from a large pool of candidates. For example, in genome-wide association studies (GWAS), the multiple testing approach can be used to identify particular genes responsible for a certain disease. This is achieved through simultaneously conducting a large number of hypothesis tests between the control and experimental groups on each individual gene. With each hypothesis test’s t-statistics recorded, we can search through the data for anomalies and identify genes that might be correlated with the disease of our interest. 
 
-Acute Lymphocytic Leukemia (ALL) and Acute Myelogenous Leukemia (AML) are two common types of leukemia. According to the [Children's Hospital of Pittsburgh](https://www.chp.edu/our-services/cancer/conditions/leukemia/types), ALL acounts for about 75 percent of childhood leukemia. It affects the growth of lymphocytes, a type of white blood cells that is normally responsible for one's immunity, causing it to overproduce and crowding out other types of blood cells. On the other hand, AML causes the overproduction of granulocytes, another type of white blood cells. Identifying genes responsible for each of the two types of leukemia helps us to better understand their pathology as well as allows build statistical models adaptable for future studies and applications.
+Acute Lymphocytic Leukemia (**ALL**) and Acute Myelogenous Leukemia (**AML**) are two common types of leukemia. According to the [Children's Hospital of Pittsburgh](https://www.chp.edu/our-services/cancer/conditions/leukemia/types), ALL acounts for about 75 percent of childhood leukemia. It affects the growth of lymphocytes, a type of white blood cells that is normally responsible for one's immunity, causing it to overproduce and crowding out other types of blood cells. On the other hand, AML causes the overproduction of granulocytes, another type of white blood cells. Identifying genes responsible for each of the two types of leukemia helps us to better understand their pathology as well as allows build statistical models adaptable for future studies and applications.
 
 
 ![Sample images of AML, ALL, and other types of leukemia](/aml_all.jpeg)
@@ -35,7 +35,7 @@ To do this we found the tail areas (or probabilities) of each t statistic and th
 
 We will estimate the empirical null distribution by estimating the fraction of true negatives. To do so, we separate the data into two sets, S<sub>0</sub> and S<sub>A</sub>, where S<sub>0</sub> denotes all true negatives and S<sub>A</sub> denotes all true positives. In our dataset, S<sub>0</sub> represents all genes that are uncorrelated with differentiating AML from ALL while S<sub>A</sub> represents those genes that correlate. Furthermore, we define  f<sub>0</sub>(t) and f<sub>A</sub>(t) to be the probability distribution of S<sub>0</sub> and S<sub>A</sub> respectively. We will estimate the fraction p<sub>0</sub> of the number of true negatives over the number of samples so that the data distribution:
 
-f(t) = p<sub>0</sub>f<sub>0</sub>(t) + (1-p<sub>0</sub>)f<sub>A</sub>(t)
+**f(t) = p<sub>0</sub>f<sub>0</sub>(t) + (1-p<sub>0</sub>)f<sub>A</sub>(t)**
 
 is close to the  the scaled density, p<sub>0</sub>f<sub>0</sub>(t) within an interval l<sub>0</sub> around the null distribution mean, 𝝁<sub>0</sub>. 
 
@@ -47,16 +47,26 @@ Notably, Efron et al. (2001) discusses that such application of the empirical nu
 
 We will use **false discovery rate** as our threshold metric for the statistical parametric map. The false discovery rate is defined as the rate of **type I errors**, the ratio between the number of false positives and the number of predicted positives. For our study, we set the level of threshold as u and define FP(u) and TP(u) to be the number of false positives and the number of true positives respectively under the threshold u. We will compute the false discovery rate under threshold u as the following:
 
-FDR(u) = E[FP(u)/FP(u) + TP(u)]
+**FDR(u) = E[FP(u)/FP(u) + TP(u)]**
 
 We aim to control the threshold u to lower the false discovery rate. Notably, when u is large, we have fewer number of false positives, leading to a lowered FDR; however, increasing the threshold u also leads to increased false negatives. Ideally, we want to achieve a set FDR with the minimum level of threshold, u. To do this, we will first set a significance level ɑ for the FDR and then calculate the FDR for different levels of u and select the minimum u that satisfies the significance level of FDR. To put this in formula, we want to calculate
 
-min<sub>u</sub>FDR(u)
+**min<sub>u</sub>FDR(u)**
 
 Compared to other thresholding criteria such as the **family-wise error rate (FWER)**, which controls the rate of false positives among all samples, the FDR only controls the rate of false positives among the positives and therefore is more permissive of false positives by definition (Schwartzman et al., 2009). Since our goal is to identify the genes correlated with differentiating the AML from ALL, FDR is preferable as it allows some false positives as long as there are way more true positives. 
 
 
 ## Data Example
+
+Using the quantile transformation method mentioned above, we obtain transformed z-scores from the t-statistics. From the graph below we see that the histogram still does not match well with the theoretical null (red dotted line) as it is much wider and shorter than the the theoretical null. We then estimate the parameter p<sub>0</sub> using the method mentioned in the secion above about empirical null estimation and compute that p<sub>0</sub> is approximately 0.595 for the theoretical null distirbution. This suggests that about 40.5% of the genes are expressed differently in the two types of leukemia patients from our data. The result is also observed from the scaled theoretical null distribution, which is plotted as the dashed red line, as it matches the histogram better than the theoretical null before the scaling but still does not solve the issue with the additional variances.
+
+![Histogram of z-scores](/test_zscores_hist.jpg)
+
+To solve this problem, we introduce an approach to estimate the empirical null distirbution using the **median** and an estimation of the standard deviation using the **interquartile range (IQR)**. The estimation gives results p<sub>0</sub>=0.933, μ=-0.066, and σ=1.534. The resulting distribution, observed as the red solid line in the graph above, provides a much better fit of the data than both the theoretical and scaled theoretical null distribution. The empirical null distribution adjusts to the histogram’s additional variance due to confounding factors and will provide more realistic results and estimations of error rates. 
+
+To test the accuracy of different null distributions, we will look at metrics such as the **true positive rate (TPR)**, the **false positive rate (FPR)**, and the **false discovery rate (FDR)**. The graph below shows 
+
+![True Positive Rate between Theoretical and Empirical Null Distribution](/tpr_test.jpg)
 
 ## Discussion
 

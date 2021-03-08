@@ -12,10 +12,10 @@ Acute Lymphocytic Leukemia (ALL) and Acute Myelogenous Leukemia (AML) are two co
 [Sample images of AML, ALL, and other types of leukemia](https://www.mdpi.com/2075-4418/9/3/104/htm)
 
 
-In our study, we apply a multiple testing model to a leukemia dataset collected by Harvard Professor of Pediatrics, Todd Golub. The dataset consists of the gene expressions of more than six thousands different genes from a mixture sample of seventy-two patients with either AML or ALL. And our task is to identify genes that differentiates the two types of leukemia.
+In our study, we will apply a multiple testing model to a leukemia gene dataset to identify genes that are expressed differently between the two groups of leukemia. We will use both a theoretical null distribution and an empirical null distribution and compare and contrast the results between the two. We hypothesize that the empirical null distribution will yield more meaningful result than the theoretical null distribution.
 
 ## Exploratory Data Analysis
-The dataset contains the gene expressions of 47 AML patients and 25 ALL patients.
+The dataset we will be using is collected by Harvard Professor of Pediatric, Todd Golub. It contains the gene expressions of 47 AML patients and 25 ALL patients. It is seperated into a training set and a test set. We will use these genetic data to perform pairwise t-tests between the ALL patients and the AML patients for every single gene. We will then transform the resulting t-statistics into standardized z-scores and apply quantile transformation. 
 
 ![Countplot of AML and ALL patients](/all_aml_pie.png)
 

@@ -17,7 +17,7 @@ In our study, we apply a multiple testing model to a leukemia dataset collected 
 ## Exploratory Data Analysis
 The dataset contains the gene expressions of 47 AML patients and 25 ALL patients.
 
-![Countplot of AML and ALL patients](/count.png)
+![Countplot of AML and ALL patients](/all_aml_pie.png)
 
 
 

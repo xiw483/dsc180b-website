@@ -19,6 +19,7 @@ The dataset we will be using is collected by Harvard Professor of Pediatric, Tod
 
 ![Countplot of AML and ALL patients](/all_aml_pie.png)
 
+![Histogram of t-statistics] (/test_tstat_hist.jpg)
 
 
 ## Theory and Methods

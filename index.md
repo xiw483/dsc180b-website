@@ -45,7 +45,7 @@ Notably, Efron et al. (2001) discusses that such application of the empirical nu
 
 ### False Discovery Rate Estimation
 
-We will use **false discovery rate** as our threshold metric for the statistical parametric map. The false discovery rate is defined as the rate of **type I errors**, the ratio between the number of false positives and the number of predicted positives. For our study, we set the level of threshold as u and define FP(u) and TP(u) to be the number of false positives and the number of true positives respectively under the threshold u. We will compute the false discovery rate under threshold u as the following:
+We will use **false discovery rate (FDR)** as our threshold metric for the statistical parametric map. The false discovery rate is defined as the rate of **type I errors**, the ratio between the number of false positives and the number of predicted positives. For our study, we set the level of threshold as u and define FP(u) and TP(u) to be the number of false positives and the number of true positives respectively under the threshold u. We will compute the false discovery rate under threshold u as the following:
 
 **FDR(u) = E[FP(u)/FP(u) + TP(u)]**
 

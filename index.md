@@ -70,6 +70,10 @@ To test the accuracy of different null distributions, we will look at metrics su
 ![False Positive Rate between Theoretical and Empirical Null Distribution](/fpr_test.png)
 ![False Discovery Rate between Theoretical and Empirical Null Distribution](/fdr_test.png)
 
+The TPR indicates the likelihood that an actual positive sample produces a positive testing result. In the graph above we see that the TPR of the empirical null goes above 1. This is due to mismatch between the data and the distribution, as observed in the previous histogram of the z-scores, the empirical null distribution goes above the histogram from around -4 to -2. The FPR indicates the likelihood of false positives. Lastly, we see that the theoretical null distribution yields a FDR curve that converges to 0 as the threshold x increases. Meanwhile, the empirical null distribution produces a much higher level FDR than the theoretical null distribution given the same level of threshold. Moreover, the FDR curve yielded by the empirical null distribution fails to converge as x increases and is approximately 0.44 when the threshold is the largest at x = 5. At first this may seem to be indications that the theoretical null outperforms the empirical null; however, this is not necessarily true. Since we do not have the actual labels of the data and instead only have an estimation of the error rate, we cannot know for sure the accuracy of either model. However, we know that the empirical null distribution adjusts for unknown factors empirically, it is likely to provide more realistic estimations and therefore more accurate results. 
+
+
+
 ## Discussion
 The graph above shows that the theoretical null distribution yields a FDR curve that converges to 0 as the threshold x increases. Meanwhile, the empirical null distribution produces a much higher level FDR than the theoretical null distribution given the same level of threshold. Moreover, the FDR curve yielded by the empirical null distribution fails to converge as x increases and is approximately 0.44 when the threshold is the largest at x = 5.
 

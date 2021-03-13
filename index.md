@@ -21,7 +21,7 @@ The dataset we will be using is collected by Harvard Professor of Pediatric, Tod
 
 The histogram of the t-statistics show that the histogram of our data does not match well with the theoretical null distribution N(0,1) (solid red line). It appears that the histogram is both wider and shorter than the theoretical null. Furthermore, the data appears to have a slight right skew. To address this issue, we will use the estimation of parameter p<sub>0</sub> and an empirical estimation of the null distribution to address the additional variance.
   
-![Histogram of t-statistics](/test_tstat_hist.jpg)
+![Histogram of t-statistics](/test_tstat_hist.png)
 
 
 ## Theory and Methods

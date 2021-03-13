@@ -60,15 +60,15 @@ Compared to other thresholding criteria such as the **family-wise error rate (FW
 
 Using the quantile transformation method mentioned above, we obtain transformed z-scores from the t-statistics. From the graph below we see that the histogram still does not match well with the theoretical null (red dotted line) as it is much wider and shorter than the the theoretical null. We then estimate the parameter p<sub>0</sub> using the method mentioned in the secion above about empirical null estimation and compute that p<sub>0</sub> is approximately 0.595 for the theoretical null distirbution. This suggests that about 40.5% of the genes are expressed differently in the two types of leukemia patients from our data. The result is also observed from the scaled theoretical null distribution, which is plotted as the dashed red line, as it matches the histogram better than the theoretical null before the scaling but still does not solve the issue with the additional variances.
 
-![Histogram of z-scores](/test_zscores_hist.jpg)
+![Histogram of z-scores](/test_zscores_hist.png)
 
 To solve this problem, we introduce an approach to estimate the empirical null distirbution using the **median** and an estimation of the standard deviation using the **interquartile range (IQR)**. The estimation gives results p<sub>0</sub>=0.933, μ=-0.066, and σ=1.534. The resulting distribution, observed as the red solid line in the graph above, provides a much better fit of the data than both the theoretical and scaled theoretical null distribution. the new estimated p<sub>0</sub> is much higher than the p<sub>0</sub> of the theoretical null, suggesting that only around 6.7% of the total genes are expressed differently between the two groups of patients. Since the empirical null distribution adjusts to the histogram’s additional variance due to confounding factors, we believe it will provide more realistic results and estimations of error rates. 
 
 To test the accuracy of different null distributions, we will look at metrics such as the **true positive rate (TPR)**, the **false positive rate (FPR)**, and the **false discovery rate (FDR)**. The TPR is calculated as the rate between the number of true positives (TP) and the number of true positives plus the number of false negatives (FN). It indicates the likelihood that an actual positive sample produces a positive testing result. The FPR is calculated as the rate between the number of false positives (FP) and the number of false positives and true negatives (TN). It indicates the likelihood of false positives. Lastly, the FDR is computed in equation (2) as the rate between the number of FP and the number of total tested positives and it computes the rate of type I error. 
 
-![True Positive Rate between Theoretical and Empirical Null Distribution](/tpr_test.jpg)
-![False Positive Rate between Theoretical and Empirical Null Distribution](/fpr_test.jpg)
-![False Discovery Rate between Theoretical and Empirical Null Distribution](/fdr_test.jpg)
+![True Positive Rate between Theoretical and Empirical Null Distribution](/tpr_test.png)
+![False Positive Rate between Theoretical and Empirical Null Distribution](/fpr_test.png)
+![False Discovery Rate between Theoretical and Empirical Null Distribution](/fdr_test.png)
 
 ## Discussion
 The graph above shows that the theoretical null distribution yields a FDR curve that converges to 0 as the threshold x increases. Meanwhile, the empirical null distribution produces a much higher level FDR than the theoretical null distribution given the same level of threshold. Moreover, the FDR curve yielded by the empirical null distribution fails to converge as x increases and is approximately 0.44 when the threshold is the largest at x = 5.
